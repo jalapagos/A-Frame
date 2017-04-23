@@ -1,14 +1,37 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-	<head>
-		<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-	</head>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.js"></script>
+        <script type="text/javascript">
+        	AFRAME.registerComponent('scale-on-mouseenter', {
+        		schema: {
+        			to: {default: '2.5 2.5 2.5'}
+        		},
 
-	<body>
+        	init: function() {
+        		var data = this.data;
+        		this.el.addEventListener('mouseenter', function() {
+        			this.setAttribute('scale', data.to);
+        		});
+        	}
+        });
+        </script>	
+    </head>
+    
+    <body>
+    
 		<a-scene>
-
-			<a-box color="tomato" depth="2" height="4" width="0.5">/<a-box>
-
+		  <a-assets>
+		    <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+		    <img id="skyTexture"
+		      src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+		    <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+		  </a-assets>
+		  <!--<a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>-->
+		  <a-sky src="#skyTexture"></a-sky>
+		  <a-light type="ambient" color="#445451"></a-light>
+		  <a-light type="point" intensity="2" position="2 4 4"></a-light>
 		</a-scene>
-	</body>
+    
+    </body>
 </html>
