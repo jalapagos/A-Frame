@@ -2,21 +2,112 @@
 <html>
     <head>
   		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-  		<script src="/components/foo-component.js"></script>
-    </head>  
+    	<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>    
+</head>  
     <body>
 		<a-scene>
 			<a-sky color="#87CEFA"></a-sky>
+			<a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 10000"></a-entity>
 			<a-plane color="#fabb87" rotation="-90 0 0" width="30" height="30"></a-plane>
 
-				<a-box color="red" depth="1" height="1" width="1" position="0 5 -10">
+				<a-sphere color="red" depth="2" height="2" width="2" position="-15 5 -15">
 					<a-animation attribute="position"
-						dur="50000"
+						dur="800"
+						from="-15 5 -15"
+						to="-15 0 -15"
+						direction="alternateReverse"
 						fill="forwards"
-						to="0 0 0"
-						repeat="5">
+						repeat="1">
 					</a-animation>
-			</a-box>
+				</a-sphere>
+
+				<a-cylinder color="brown" height="5" radius="0.5" position="-12.5 0 -15"></a-cylinder>
+				<a-triangle color="green" position="-12.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
+
+
+
+				<a-sphere color="red" depth="2" height="2" width="2" position="-10 5 -15">
+					<a-animation attribute="position"
+						dur="800"
+						from="-10 5 -15"
+						to="-10 0 -15"
+						direction="alternateReverse"
+						fill="forwards"
+						repeat="1">
+					</a-animation>
+				</a-sphere>
+
+				<a-cylinder color="brown" height="5" radius="0.5" position="-7.5 0 -15"></a-cylinder>
+				<a-triangle color="green" position="-7.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
+
+				<a-sphere color="red" depth="2" height="2" width="2" position="-5 5 -15">
+					<a-animation attribute="position"
+						dur="800"
+						from="-5 5 -15"
+						to="-5 0 -15"
+						direction="alternateReverse"
+						fill="forwards"
+						repeat="1">
+					</a-animation>
+				</a-sphere>
+
+
+				<a-cylinder color="brown" height="5" radius="0.5" position="-2.5 0 -15"></a-cylinder>
+				<a-triangle color="green" position="-2.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
+
+				<a-sphere color="red" depth="2" height="2" width="2" position="0 5 -15">
+					<a-animation attribute="position"
+						dur="800"
+						from="0 5 -15"
+						to="0 0 -15"
+						direction="alternateReverse"
+						fill="forwards"
+						repeat="1">
+					</a-animation>
+				</a-sphere>
+
+				<a-cylinder color="brown" height="5" radius="0.5" position="2.5 0 -15"></a-cylinder>
+				<a-triangle color="green" position="2.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
+
+				<a-sphere color="red" depth="2" height="2" width="2" position="5 5 -15">
+					<a-animation attribute="position"
+						dur="800"
+						from="5 5 -15"
+						to="5 0 -15"
+						direction="alternateReverse"
+						fill="forwards"
+						repeat="1">
+					</a-animation>
+				</a-sphere>
+
+				<a-cylinder color="brown" height="5" radius="0.5" position="7.5 0 -15"></a-cylinder>
+				<a-triangle color="green" position="7.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
+
+				<a-sphere color="red" depth="2" height="2" width="2" position="10 5 -15">
+					<a-animation attribute="position"
+						dur="800"
+						from="10 5 -15"
+						to="10 0 -15"
+						direction="alternateReverse"
+						fill="forwards"
+						repeat="1">
+					</a-animation>
+				</a-sphere>
+
+				<a-cylinder color="brown" height="5" radius="0.5" position="12.5 0 -15"></a-cylinder>
+				<a-triangle color="green" position="12.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
+				
+				<a-sphere color="red" depth="2" height="2" width="2" position="15 5 -15">
+					<a-animation attribute="position"
+						dur="800"
+						from="15 5 -15"
+						to="15 0 -15"
+						direction="alternateReverse"
+						fill="forwards"
+						repeat="1">
+					</a-animation>
+				</a-sphere>
+
 		</a-scene>
     </body>
 </html>
