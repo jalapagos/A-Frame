@@ -4,108 +4,100 @@
   		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     	<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>  
     	<script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>   
-</head>  
+	</head>  
     <body>
-		<a-scene>
+		<a-scene fog="type: exponential; color: #AAA; density:0.005">
+		<a-assets>
+    		<img id="meme1" src="meme1.jpg">
+    		<img id="meme2" src="meme2.jpg">
+    		<img id="meme3" src="meme3.jpg">
+    		<img id="meme4" src="meme4.jpg">    		
+    		<img id="meme5" src="meme5.jpg">
+    		<img id="meme6" src="meme6.jpg">
+    		<img id="meme7" src="meme7.jpg">
+    		<img id="meme8" src="meme8.jpg">
+  		</a-assets>
+
+  		  <a-curvedimage src="#meme1" height="3.0" radius="5.7" theta-length="72" rotation="0 50 0" scale="1 2 1" position="10 5 5"></a-curvedimage>
+  		  <a-curvedimage src="#meme2" height="5.0" radius="5.7" theta-length="72" rotation="0 140 0" scale="1 2 1" position="-8 15 -10"></a-curvedimage>
+  		  <a-curvedimage src="#meme3" height="3.0" radius="5.7" theta-length="72" rotation="0 50 0" scale="1 2 1" position="0 9 4"></a-curvedimage>
+  		  <a-curvedimage src="#meme4" height="3.0" radius="5.7" theta-length="72" rotation="0 50 0" scale="1 2 1" position="15 10 0"></a-curvedimage>
+  		  
+  		  <a-curvedimage src="#meme5" height="3.0" radius="5.7" theta-length="72" rotation="0 250 0" scale="2 2 2" position="-10 8 7"></a-curvedimage>
+  		  <a-curvedimage src="#meme6" height="5.0" radius="5.7" theta-length="72" rotation="0 0 90" scale="1 2 1" position="-10 12 15"></a-curvedimage>
+  		  <a-curvedimage src="#meme7" height="5.0" radius="5.7" theta-length="72" rotation="0 200 0" scale="2 2 2" position="-15 15 0"></a-curvedimage>
+  		  <a-curvedimage src="#meme8" height="3.0" radius="5.7" theta-length="72" rotation="0 90 0" scale="2 2 2" position="3 15 -6"></a-curvedimage>
+
 			<a-sky color="#87CEFA"></a-sky>
-			<a-entity id="rain" particle-system="preset: rain; color: #000000; particleCount: 10000"></a-entity>
   			<a-entity environment="preset:forest"></a-entity>
+
 				<a-sphere color="red" depth="2" height="2" width="2" position="-15 0 -15">
-					<!--<a-animation attribute="position"
+					<a-animation attribute="position"
 						dur="800"
 						from="-15 5 -15"
 						to="-15 0 -15"
 						direction="alternateReverse"
 						fill="forwards"
-						repeat="1">
-					</a-animation>-->
+						repeat="forever">
+					</a-animation>
 				</a-sphere>
 
 				<a-cylinder color="brown" height="5" radius="0.5" position="-12.5 0 -15"></a-cylinder>
 				<a-triangle color="green" position="-12.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
 
-
-
-				<a-sphere color="red" depth="2" height="2" width="2" position="-10 0 -15">
-					<!--<a-animation attribute="position"
-						dur="800"
-						from="-10 5 -15"
-						to="-10 0 -15"
-						direction="alternateReverse"
-						fill="forwards"
-						repeat="1">
-					</a-animation>-->
-				</a-sphere>
+				<a-sphere color="red" depth="2" height="2" width="2" position="-10 0 -15"></a-sphere>
 
 				<a-cylinder color="brown" height="5" radius="0.5" position="-7.5 0 -15"></a-cylinder>
 				<a-triangle color="green" position="-7.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
 
 				<a-sphere color="red" depth="2" height="2" width="2" position="-5 0 -15">
-					<!--<a-animation attribute="position"
+					<a-animation attribute="position"
 						dur="800"
 						from="-5 5 -15"
 						to="-5 0 -15"
 						direction="alternateReverse"
 						fill="forwards"
-						repeat="1">
-					</a-animation>-->
+						repeat="forever">
+					</a-animation>
 				</a-sphere>
 
 
 				<a-cylinder color="brown" height="5" radius="0.5" position="-2.5 0 -15"></a-cylinder>
 				<a-triangle color="green" position="-2.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
 
-				<a-sphere color="red" depth="2" height="2" width="2" position="0 0 -15">
-					<!--<a-animation attribute="position"
-						dur="800"
-						from="0 5 -15"
-						to="0 0 -15"
-						direction="alternateReverse"
-						fill="forwards"
-						repeat="1">
-					</a-animation>-->
-				</a-sphere>
+				<a-sphere color="red" depth="2" height="2" width="2" position="0 0 -15"></a-sphere>
 
 				<a-cylinder color="brown" height="5" radius="0.5" position="2.5 0 -15"></a-cylinder>
 				<a-triangle color="green" position="2.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
 
 				<a-sphere color="red" depth="2" height="2" width="2" position="5 0 -15">
-					<!--<a-animation attribute="position"
+					<a-animation attribute="position"
 						dur="800"
 						from="5 5 -15"
 						to="5 0 -15"
 						direction="alternateReverse"
 						fill="forwards"
-						repeat="1">
-					</a-animation>-->
+						repeat="forever">
+					</a-animation>
 				</a-sphere>
 
 				<a-cylinder color="brown" height="5" radius="0.5" position="7.5 0 -15"></a-cylinder>
 				<a-triangle color="green" position="7.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
 
-				<a-sphere color="red" depth="2" height="2" width="2" position="10 0 -15">
-					<!--<a-animation attribute="position"
-						dur="800"
-						from="10 5 -15"
-						to="10 0 -15"
-						direction="alternateReverse"
-						fill="forwards"
-						repeat="1">
-					</a-animation>-->
-				</a-sphere>
+				<a-sphere color="red" depth="2" height="2" width="2" position="10 0 -15"></a-sphere>
 
 				<a-cylinder color="brown" height="5" radius="0.5" position="12.5 0 -15"></a-cylinder>
 				<a-triangle color="green" position="12.5 4 -15" vertex-a="0 3 0" vertex-b="-2 -2 0" vertex-c="2 -2 0"></a-triangle>
 				
 				<a-sphere color="red" depth="2" height="2" width="2" position="15 0 -15">
-					<!--<a-animation attribute="position"
+					<a-animation attribute="position"
 						dur="800"
 						from="15 5 -15"
 						to="15 0 -15"
 						direction="alternateReverse"
 						fill="forwards"
-						repeat="1">
-					</a-animation>-->
+						repeat="forever">
+					</a-animation>
 				</a-sphere>
 
 		</a-scene>
